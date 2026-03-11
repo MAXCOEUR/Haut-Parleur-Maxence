@@ -4,7 +4,7 @@
 BluetoothA2DPSink a2dp_sink;
 
 const int LED_PIN = 2;           
-const int RESET_BUTTON_PIN = 13; 
+const int RESET_BUTTON_PIN = 4; 
 
 // Variables pour la gestion du bouton
 unsigned long buttonPressStartTime = 0;
@@ -32,7 +32,7 @@ void setup() {
     i2s_pin_config_t my_pin_config = {
         .bck_io_num = 26,
         .ws_io_num = 25,
-        .data_out_num = 22,
+        .data_out_num = 33,
         .data_in_num = I2S_PIN_NO_CHANGE
     };
     a2dp_sink.set_pin_config(my_pin_config);
